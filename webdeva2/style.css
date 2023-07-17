@@ -1,0 +1,32 @@
+.page {
+	width: 80vw;
+	height: 80vh;
+	border: 1px solid red;
+}
+nav ul li {
+	display: inline;
+}
+
+#menuList.menuShow {
+	display: block;
+}
+
+/*for responsive menu*/
+#hamIcon {
+	display: none;
+}
+
+@media screen and (max-width: 800px) {
+	/*make a menu items vertical*/
+	nav ul li {
+		display: block;
+	}
+	/* unhide menu icon */
+	#hamIcon {
+		display: block;
+	}
+	/*hide the menu item list*/
+	nav ul {
+		display: none;
+	}
+}
