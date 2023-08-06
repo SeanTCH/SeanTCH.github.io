@@ -70,6 +70,7 @@ h1,
 h2,
 h4,
 ul,
+ol,
 p {
 	padding: 10px;
 }
@@ -154,11 +155,12 @@ nav {
 
 .dropdownBtn .arrow {
 	height: 15px;
+	transform: rotate(0deg);
 	transition: 0.5s;
 }
 
-.dropdownBtn .showDropdown .arrow {
-	rotate: 180deg;
+.dropdownBtn.showDropdown .arrow {
+	transform: rotate(180deg);
 }
 
 .dropdown .dropdownContent {
@@ -268,10 +270,6 @@ nav {
 		overflow: hidden;
 	}
 
-	.colhalf {
-		flex-basis: 25%;
-	}
-
 	#pagecontainer img {
 		width: 100%;
 	}
@@ -282,6 +280,7 @@ nav {
 	}
 
 	button {
+		font-size: 20px;
 		height: 50px;
 	}
 

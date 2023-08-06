@@ -9,7 +9,7 @@ var allpages = document.querySelectorAll(".page");
 // section vars
 const sectionbtn = document.querySelectorAll(".sectionbtn");
 var allsections = document.querySelectorAll(".section");
-const sliders = document.querySelectorAll(".slideIn")
+const sliders = document.querySelectorAll(".slideIn");
 
 const dropdownBtn = document.querySelector(".dropdownBtn");
 
@@ -29,7 +29,7 @@ function closeNav()
 }
 
 menuBtn.addEventListener("click", openNav);
-closeMenuBtn.addEventListener("click", closeNav)
+closeMenuBtn.addEventListener("click", closeNav);
 
 
 /* Switch pages */
@@ -81,7 +81,7 @@ for (let index = 0; index < pagebtn.length; index++)
 
 		dropdownBtn.classList.remove("showDropdown");
 		closeNav();
-	})
+	});
 }
 
 /* Switch sections in one page */
@@ -94,10 +94,10 @@ function HideAllSections()
 		onesection.classList.remove("showSection"); //hide it
 	}
 	//hide section's content
-	sliders.forEach((slider) =>
+	for (var i = 0; i < sliders.length; i++)
 	{
-		slider.classList.remove("appear");
-	});
+		sliders[i].classList.remove("appear");
+	}
 }
 HideAllSections();
 
@@ -117,9 +117,11 @@ for (let index = 0; index < sectionbtn.length; index++)
 	{
 		ShowPage(3);
 		ShowSection(index + 1);
+
 		dropdownBtn.classList.remove("showDropdown");
 		slideInElement();
 	});
+
 }
 
 /* Switch between dark/light mode */
@@ -148,9 +150,9 @@ function canTopBtnAppear()
 }
 function goTopofPage()
 {
-	window.scroll({ top: 0, behavior: "smooth" })
+	window.scroll({ top: 0, behavior: "smooth" });
 }
-backTopBtn.addEventListener("click", goTopofPage)
+backTopBtn.addEventListener("click", goTopofPage);
 
 /* Slide in animation */
 function isInViewport(el)
@@ -254,20 +256,21 @@ function showQuestions(questions, quizContainer)
 	for (var i = 0; i < questions.length; i++)
 	{
 		answers = [];
-		for (option in questions[i].answers)
+
+		for (var answer in questions[i].answers)
 		{
 			answers.push(
-				'<label>'
-				+ '<input type="radio" name="question' + i + '" value="' + option + '">'
-				+ option + ': '
-				+ questions[i].answers[option]
-				+ '</label> <br>'
+				'<label>' +
+				'<input type="radio" name="question' + i + '" value="' + answer + '">' +
+				answer + ': ' +
+				questions[i].answers[answer] +
+				'</label> <br>'
 			);
 		}
 
 		output.push(
-			'<div class="question">' + questions[i].question + '</div>'
-			+ '<div class="answers">' + answers.join('') + '</div>'
+			'<div class="question">' + questions[i].question + '</div>' +
+			'<div class="answers">' + answers.join('') + '</div>'
 		);
 	}
 	quizContainer.innerHTML = output.join('');
@@ -301,9 +304,9 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton)
 {
 	showQuestions(questions, quizContainer);
 
-	submitBtn.addEventListener("click", function ()
+	submitButton.addEventListener("click", function ()
 	{
 		showResults(questions, quizContainer, resultsContainer);
-	})
+	});
 }
 generateQuiz(myQuestions, quizContainer, resultsContainer, submitBtn);
