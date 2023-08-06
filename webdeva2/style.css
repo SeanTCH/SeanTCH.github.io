@@ -128,6 +128,10 @@ nav {
 	display: none;
 }
 
+.overlay #closeMenuBtn {
+	display: none;
+}
+
 .overlay-content {
 	display: flex;
 	padding: 5px;
@@ -237,7 +241,7 @@ nav {
 #results {
 	border: 2px solid #144272;
 	padding: 5px;
-
+	margin: 10px;
 }
 
 .question {
@@ -246,6 +250,10 @@ nav {
 
 .answers {
 	margin-bottom: 20px;
+}
+
+.answers label input {
+	margin: 10px;
 }
 
 @media screen and (max-width: 800px) {
@@ -302,7 +310,7 @@ nav {
 		transition: 0.3s;
 	}
 
-	.overlay #menuCloseBtn {
+	.overlay #closeMenuBtn {
 		display: block;
 		position: absolute;
 		top: 20px;
@@ -334,4 +342,8 @@ nav {
 		align-items: center;
 	}
 
+	/* Quiz */
+	.question {
+		font-weight: 600;
+	}
 }
