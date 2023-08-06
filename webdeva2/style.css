@@ -137,10 +137,6 @@ nav {
 	list-style-type: none;
 }
 
-.overlay #menuCloseBtn {
-	display: none;
-}
-
 /* Drop down menu */
 .dropdownContent {
 	padding-left: 0px;
@@ -259,6 +255,7 @@ nav {
 
 	.flexcontainer {
 		flex-direction: column-reverse;
+		overflow: hidden;
 	}
 
 	.colhalf {
