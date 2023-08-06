@@ -4,70 +4,385 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Volleyball - A2</title>
+	<link rel="icon" href="images//favicon_volleyball.png">
+
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="About Volleyball">
+
+	<link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<!--for android-->
+	<link rel="manifest" href="favicon/site.webmanifest" />
+
+	<title>About Volleyball</title>
 	<link rel="stylesheet" href="style.css">
 	<script src="script.js" defer></script>
 </head>
 
 <body>
 	<header>
-		<h1>Volleyball</h1>
+		<div>
+			<h1>Volleyball</h1>
+			<img id="toggleDisplayMode" src="images/icons/LightDarkModeBtn.svg" alt="Light/Dark mode icon"></img>
+		</div>
 		<nav>
-			<button id="hamIcon">Menu</button>
-			<ul id="menuList">
-				<li><button id="page1btn">History</button></li>
-				<li><button id="page2btn">Rules</button></li>
-				<li><button id="page3btn">Techniques</button></li>
-			</ul>
+			<img id="menuBtn" src="images/icons/HamburgerMenu.png" alt="Hamburger Menu Icon">
+
+			<div id="navBar" class="overlay">
+				<img id="closeMenuBtn" src="images/icons/CancelCross.png" alt="Close Menu Button Icon">
+				<ul class="overlay-content">
+					<li><button class="pagebtn">History</button></li>
+					<li><button class="pagebtn">Rules</button></li>
+					<li class="dropdown">
+						<button class="dropdownBtn">
+							<span>Techniques</span>
+							<img class="arrow" src="images/icons/SortDownArrow.png">
+						</button>
+						<ul class="dropdownContent">
+							<li><button class="sectionbtn">Serving</button></li>
+							<li><button class="sectionbtn">Digging/Receiving</button></li>
+							<li><button class="sectionbtn">Setting</button></li>
+							<li><button class="sectionbtn">Spiking</button></li>
+						</ul>
+					</li>
+					<li><button class="pagebtn">Quiz</button></li>
+				</ul>
+			</div>
 		</nav>
+		<img id="goTopBtn" src="images/icons/UpwardArrow.png" alt="UpwardArrow Back to top button">
 	</header>
 
-	<div id="pagecontainer">
+	<div id="pagecontainer" class="flexcontainer">
+		<!-- History & Origins -->
 		<div class="page" id="page1">
 			<h2>History & Origins of Volleyball</h2>
 
-			<p>In 1895, William G. Morgan, an instructor at the Young Men's Christian Association (YMCA) Holyoke, Massachusetts, decided blend elements of basketball, baseball, tennis, and handball to create a game. So, he borrowed. From basketball, he took the ball. From tennis the net. From handball, the use of hands and the ability to play off the walls and over hangs. And, from, he took the concept of innings.</p>
+			<div class="flexcontainer">
+				<div class="colhalf">
 
-			<p>Morgan introduced the sport (called mintonette, the original name of volleyball) at the YMCA Physical Director's Conference a year later at Springfield College, Massachusetts. Though it was incomplete with no fixed rules and a format to follow, the sport did enough to win over the delegation and soon became a part of YMCA's wide network throughout the USA with a new name - volley ball (initially it was termed as two words). Volleyball was officially selected to spell as a single word in 1952.</p>
+					<p>In 1895, William G. Morgan, an instructor at the Young Men's Christian Association (YMCA) Holyoke, Massachusetts, decided blend elements of basketball, baseball, tennis, and handball to create a game. So, he borrowed:</p>
+					<ul>
+						<li>Basketball: The ball</li>
+						<li>Tennis: The net</li>
+						<li>Handball: The use of hands and ability to play off walls and overhangs</li>
+						<li>Baseball: Concept of innings - called to be sets later</li>
+					</ul>
+					<p>Morgan introduced the sport (called mintonette, the original name of volleyball) at the YMCA Physical Director's Conference a year later at Springfield College, Massachusetts. Though it was incomplete with no fixed rules and a format to follow, the sport did enough to win over the delegation and soon became a part of YMCA's wide network throughout the USA with a new name, Volley Ball (initially it was termed as two words). Volleyball was officially selected to spell as a single word in 1952.</p>
+				</div>
+
+				<div class="colhalf">
+					<iframe src="https://www.youtube.com/embed/c9hRX122nmU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				</div>
+			</div>
+
+			<footer>
+				<ul> Credits:
+					<li><a href="https://olympics.com/en/news/what-history-volleyball-game-origin-mintonette-ymca-fivb-olympics" target="_blank">History of volleyball: From humble beginnings to a global sport</a></li>
+					<li><a href="https://ncva.com/info/general-info/history-of-volleyball/" target="_blank">History of Volleyball</a></li>
+				</ul>
+			</footer>
+
 		</div>
+
+		<!-- Rules & Violations -->
 		<div class="page" id="page2">
 			<h2>Rules & Violations of Volleyball</h2>
-			<ol>
-				Rules:
-				<li>Only 6 players on the court at any given time: 3 in the front row and 3 in the back row.</li>
-				<li>The same player is not able to hit the ball twice in succession (a block is not considered a hit).</li>
-				<li>A ball hitting the boundary line is considered in.</li>
-				<li>A ball is out if it hits an antenna, the floor outside of the court (boundary), or the net (and is not able to get over to the other side). The team that has the last contact with the ball loses a point.</li>
-				<li>It is illegal to catch, hold or throw a ball.</li>
-				<li>After the serve, front-line players may switch positions at the net.</li>
-				<li>It is legal to contact the ball with any part of a player's body.</li>
-			</ol>
-			<br>
-			<ol>
-				Violations:
-				<li>Stepping on or across the service line when serving while contacting the ball.</li>
-				<li>A back row player attacking a ball inside the front zone (the area inside the 3-metre line) when, at contact, the ball is completely above the net is illegal.</li>
-				<li>Crossing the court centreline with any part of your body, except for a hand or foot. It is only considered a violation if the entire hand or entire foot crosses the court centreline.</li>
-				<li>Touching the net with any part of the body while the ball is in play.</li>
-				<li>Blocking a ball and contacting it if the opponent has not used 3 contacts and has a player making a play for the ball (such as spiking).</li>
-			</ol>
+
+			<div class="flexcontainer">
+				<div class="colhalf">
+					<ol>
+						Rules:
+						<li>Only 6 players on the court at any given time: 3 in the front row and 3 in the back row.</li>
+						<li>A team can only hit the ball a maximum of 3 times before passing it over the net.</li>
+						<li>The same player is not able to hit the ball twice in succession (a block is not considered a hit).</li>
+						<li>A ball hitting the boundary line is considered in.</li>
+						<li>A ball is out if it hits an antenna, the floor outside of the court (boundary), or the net (and is not able to get over to the other side). The team that has the last contact with the ball loses a point.</li>
+						<li>It is illegal to catch, hold or throw a ball.</li>
+						<li>After the serve, front-line players may switch positions at the net.</li>
+						<li>It is legal to contact the ball with any part of a player's body.</li>
+					</ol>
+					<br>
+					<ol>
+						Violations:
+						<li>Stepping on or across the service line when serving while contacting the ball.</li>
+						<li>A back row player attacking a ball inside the front zone (the area inside the 3-metre line) when, at contact, the ball is completely above the net is illegal.</li>
+						<li>Crossing the court centreline with any part of your body, except for a hand or foot. It is only considered a violation if the entire hand or entire foot crosses the court centreline.</li>
+						<li>Touching the net with any part of the body while the ball is in play.</li>
+						<li>Blocking a ball and contacting it if the opponent has not used 3 contacts and has a player making a play for the ball (such as spiking).</li>
+					</ol>
+				</div>
+
+				<div class="colhalf">
+					<iframe src="https://www.youtube.com/embed/hLZ44KBWEbo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					<img src="images/VolleyballCourtDiagram.webp" alt="Volleyball court dimensions diagram">
+				</div>
+			</div>
+
+			<footer>
+				<ul> Credits:
+					<li><a href="https://www.theartofcoachingvolleyball.com/basic-volleyball-rules-and-terminology/" target="_blank">Basic Volleyball Rules and Terms</a></li>
+				</ul>
+			</footer>
 		</div>
+
+		<!-- Techniques -->
 		<div class="page" id="page3">
-			<h2>Stances of Common Techniques in Volleyball</h2>
-			<p>Serving</p>
-			<p>Digging/Receiving</p>
-			<p>Setting</p>
-			<p>Spiking</p>
+			<!-- Serving -->
+			<div class="section" id="section1">
+				<div>
+					<h2>Stances of Common Techniques in Volleyball: Serving</h2>
+					<h4>Definition</h4>
+					<p>A serve is an act of putting the ball in play by a player.</p>
+				</div>
+
+				<div class="flexcontainer">
+					<div class="colhalf slideIn fromLeft">
+						<h4>Stance: Underhand</h4>
+						<p>These type of serve is for beginners as it is easier to serve compared to the overhand variants.</p>
+						<ul>
+							<li>Hold the ball with the non-dominant hand.</li>
+							<li>Stand facing towards the net.</li>
+							<li>Legs should be slightly open, knees slightly bent and torso leaning forward.</li>
+							<li>The non-dominant leg would be in front of the dominant leg and elbows should be locked.</li>
+							<li>Toss the ball upwards and hit it with a closed or open hand while hiding the thumb.</li>
+							<li>The ball must be hit when it's under the chest, at waist level. While the contact point being at the bottom of the ball.</li>
+						</ul>
+					</div>
+
+					<div class="colhalf slideIn fromRight">
+						<iframe src="https://www.youtube.com/embed/A0epDjKO6wg?start=5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						<img src="images/UnderhandServeStepDiagram.webp" alt="Diagram of Steps To Underhand Serve">
+					</div>
+				</div>
+
+				<div class="flexcontainer">
+					<div class="colhalf slideIn fromLeft">
+						<h4>Stance: Standing Overhand</h4>
+						<p>It's an overhand serve style simpler than the others, performed with both feet on the floor.</p>
+						<ul>
+							<li>Hold the ball with one or both hands.</li>
+							<li>Toss the ball upwards slightly higher than the head at a 11 o'clock direction so that the players can see the enemy's position and adjust accordingly.</li>
+							<li>Hit the ball using the palm.</li>
+						</ul>
+					</div>
+
+					<div class="colhalf slideIn fromRight">
+						<img src="images/StandingOverhandServeStepDiagram.webp" alt="Diagram of Steps To Standing Overhand Serve">
+					</div>
+				</div>
+
+				<div class="flexcontainer">
+					<div class="colhalf slideIn fromLeft">
+						<h4>Stance: Float Serve</h4>
+						<p>The float serve is a style of overhand serve that is like a combination of standing overhand and jump serve with less power and speed. (Follows about the same movement as Standing Overhand Serve)</p>
+						<ul>
+							<li>The player positions themselves in the Service Zone far from the end line.</li>
+							<li>Toss the ball upward and forward not very high in the air.</li>
+							<li>Run forward and jump to hit the ball with the palm of the hand at the highest point possible with little force, sending the ball to a specific region of the opponent's court.</li>
+							<li>Maintain the wrist joint extended, with the fingertips pointing upwards upon contact with the ball.</li>
+						</ul>
+					</div>
+
+					<div class="colhalf slideIn fromRight">
+						<iframe src="https://www.youtube.com/embed/NRV0rMeSOBI?start=10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					</div>
+				</div>
+
+				<div class="flexcontainer">
+					<div class="colhalf slideIn fromLeft">
+						<h4>Stance: Jump Serve</h4>
+						<p>The jump serve is an overhand serve with a quick run (3-step approach) that gives momentum, a jump and a powerful hit.</p>
+						<ul>
+							<li>The player positions themselves in the Service Zone far from the end line.</li>
+							<li>Toss the ball high in the air and forward.</li>
+							<li>Run forward and jump to hit the ball with the palm of the hand at the highest point possible and with as much force as possible.</li>
+							<li>Slightly bend the wrist joint upon contact with the ball.</li>
+						</ul>
+					</div>
+
+					<div class="colhalf slideIn fromRight">
+						<iframe src="https://www.youtube.com/embed/qRE1PCvb0-0?start=6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						<img src="images/JumpOverhandServeStepDiagram.webp" alt="Diagram Steps To Jump Overhand Serve">
+					</div>
+				</div>
+
+				<footer>
+					<ul> Credits:
+						<li><a href="https://www.strength-and-power-for-volleyball.com/volleyball-techniques.html" target="_blank">Volleyball Techniques and Strategies </a></li>
+						<li><a href="https://www.dicaseducacaofisica.info/en/serve-in-volleyball/" target="_blank">The Serve in Volleyball: Types of Serves in Volleyball</a></li>
+					</ul>
+				</footer>
+			</div>
+
+			<!-- Digging/Receiving -->
+			<div class="section" id="section2">
+				<div>
+					<h2>Stances of Common Techniques in Volleyball: Digging/Receiving</h2>
+					<h4>Definition</h4>
+					<p>It is a defensive bump that keeps the ball from hitting the floor when it's sent over to the player's side of the court and keeps their team in the game with an offensive attack, usually a spike.</p>
+				</div>
+
+				<div class="flexcontainer">
+					<div class="colhalf slideIn fromLeft">
+						<h4>Stance: Hand Grip</h4>
+						<ul>
+							<li>Hands must be kept together with the fingers of the right hand placed across the fingers of the left hand.</li>
+							<li>Thumbs should then be touching along the outside edges and pointing towards the ground (for right-handers and vice versa for left-handers).</li>
+							<li>Take note that the hands should not intermingle or interlock as it could easily injure the player's hands due to the quick and strong spikes or serves that the player may try to receive.</li>
+						</ul>
+					</div>
+
+					<div class="colhalf slideIn fromRight">
+						<img src="images/DigReceivingPlatformHandGrip.png" alt="Digging/Receiving Platform Hand Grip">
+					</div>
+				</div>
+
+				<div class="flexcontainer">
+					<div class="colhalf slideIn fromLeft">
+						<h4>Stance: Body Positioning</h4>
+						<p>Players should always be in the ready position to prepare for an incoming ball.</p>
+						<ul>
+							<li>Player's knees are slightly bent with their hands at waist level.</li>
+							<li>Elbows are near the body.</li>
+							<li>Shoulders should be in front of the knees which is in front of the toes.</li>
+						</ul>
+						<p>This is so that players can concentrate and react to an incoming ball quicker.</p>
+					</div>
+
+					<div class="colhalf slideIn fromRight">
+						<img src="images/ReadyPosition.jpg" alt="Ready Position for digging/receiving a ball">
+					</div>
+				</div>
+
+				<footer>
+					<ul> Credits:
+						<li><a href="https://www.strength-and-power-for-volleyball.com/volleyball-techniques.html" target="_blank">Volleyball Techniques and Strategies </a></li>
+						<li><a href="https://www.strength-and-power-for-volleyball.com/volleyball-skills-digging.html" target="_blank">How to Dig a Volleyball Techniques for Defense</a></li>
+					</ul>
+				</footer>
+			</div>
+
+			<!-- Setting -->
+			<div class="section" id="section3">
+				<div>
+					<h2>Stances of Common Techniques in Volleyball: Setting</h2>
+					<h4>Definition</h4>
+					<p>A set is an overhand contact of the ball, usually, the second contact in a rally, made after a pass in a serve receive or dig in defence to redirect the ball to a hitter in the front or back row by a setter to run the team's offence.</p>
+				</div>
+
+				<div class="flexcontainer">
+					<div class="colhalf slideIn fromLeft">
+						<h4>Stance: Hand Positioning (Platform)</h4>
+						<p>The hand position is also know as the platform as it is where the ball will contact when the player is setting.
+						<ul>
+							<li>Player's thumbs are to be pointing at their forehead and not to be out and in front.</li>
+							<li>Place the platform at the player's forehead.</li>
+							<li>It should be at an 11 o'clock angle for a forward set (assume the player is facing the left side).</li>
+							<li>It should be at a 1 o'clock angle for a backward set (assume the player is facing the left side).</li>
+						</ul>
+						</p>
+					</div>
+
+					<div class="colhalf slideIn fromRight">
+						<img src="images/SettingPlatform.jpg" alt="Hand Position/Platform when getting ready to set the ball">
+					</div>
+				</div>
+
+				<div class="flexcontainer">
+					<div class="colhalf slideIn fromLeft">
+						<h4>Stance: Body Positioning</h4>
+						<p> The setters should be in the ready position the moment one of their defenders is receiving or digging the ball towards them.
+						<ul>
+							<li>Always keep their dominant side's leg in front.</li>
+							<li>Bend their knees, elbows, and ankles.</li>
+							<li>Players should have a triangle shape with their fingers.</li>
+							<li>Players should have a second triangle shape with their elbows.</li>
+						</ul>
+						</p>
+					</div>
+
+					<div class="colhalf slideIn fromRight">
+						<iframe src="https://www.youtube.com/embed/h5mpBCRK_yk?start=13" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					</div>
+				</div>
+
+				<footer>
+					<ul> Credits:
+						<li><a href="https://www.strength-and-power-for-volleyball.com/volleyball-techniques.html" target="_blank">Volleyball Techniques and Strategies </a></li>
+						<li><a href="https://www.strength-and-power-for-volleyball.com/volleyball-skills-setting.html" target="_blank">How to Volleyball Set Strategies and Techniques for Setting</a></li>
+						<li><a href="https://www.ussportscamps.com/tips/volleyball/volleyball-tips-setting">Volleyball Coach's Corner Volleyball Tips on Setting</a></li>
+					</ul>
+				</footer>
+			</div>
+
+			<!-- Spiking -->
+			<div class="section" id="section4">
+				<div>
+					<h2>Stances of Common Techniques in Volleyball: Spiking</h2>
+					<h4>Definition</h4>
+					<p>A spike is a form of attack used to send the ball over to the opponent's court in a way so that receiving is harder for the opposition. It is an act of jumping and hitting the ball down into the opponent's court.</p>
+				</div>
+
+				<div class="flexcontainer">
+					<div class="colhalf slideIn fromLeft">
+						<h4>Stance: Preperation</h4>
+						<p>Players should be in a ready position before spiking.
+						<ul>
+							<li>They are to lean slightly forward.</li>
+							<li>Dominant leg in front of the other leg (vice-versa for left-handers).</li>
+							<li>Right leg in front of the left leg (vice-versa for left-handers).</li>
+							<li>Players must keep their elbow high</li>
+							<li>Players should always be jumping upwards and not forward to not touch the net.</li>
+						</ul>
+						</p>
+					</div>
+
+					<div class="colhalf slideIn fromRight">
+						<img src="images/SpikingStepDiagram.jpg" alt="Diagram of Steps to Spike ">
+					</div>
+				</div>
+
+				<div class="flexcontainer">
+					<div class="colhalf slideIn fromLeft">
+						<h4>Stance: Footwork/Approach</h4>
+						<p>The right-handers are to have a run-up with their footwork being their left foot first, followed by their right foot, and finally their left foot again.<br>The left-handers are to have a run-up with their footwork being their right foot first, followed by their left foot, and finally their right foot again.
+						<ul>
+							<li>The first step is always a small one.</li>
+							<li>The last step is usually always a cut at a 70 - 90-degree angle</li>
+							<li>The player will first swing their hands upwards on their first step, then swing downwards on their second step, and finally swing upwards again on their last step together with the cut.</li>
+							<li>Additionally, make sure the swings are big so that there is more momentum</li>
+						</ul>
+						</p>
+					</div>
+
+					<div class="colhalf slideIn fromRight">
+						<iframe src="https://www.youtube.com/embed/7qRzBXGvezQ?start=77" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					</div>
+				</div>
+
+				<footer>
+					<ul> Credits:
+						<li><a href="https://www.strength-and-power-for-volleyball.com/volleyball-techniques.html" target="_blank">Volleyball Techniques and Strategies </a></li>
+						<li><a href="https://betteratvolleyball.com/how-to-spike-a-volleyball/" target="_blank">How To Spike a Volleyball</a></li>
+					</ul>
+				</footer>
+			</div>
+		</div>
+
+		<!-- Quiz -->
+		<div class="page" id="page4">
+			<h2>Quiz</h2>
+			<div class="quizSection">
+				<div id="quiz"></div>
+				<button id="submit">Get Results</button>
+				<div id="results"></div>
+			</div>
 		</div>
 	</div>
-
-	<footer>
-		Credits:
-		<ul>
-			<li><a href="https://www.theartofcoachingvolleyball.com/basic-volleyball-rules-and-terminology/" target="_blank">Basic Volleyball Rules and Terms</a></li>
-			<li><a href="https://olympics.com/en/news/what-history-volleyball-game-origin-mintonette-ymca-fivb-olympics" target="_blank">History of volleyball: From humble beginnings to a global sport</a></li>
-		</ul>
-	</footer>
 </body>
 
 </html>
